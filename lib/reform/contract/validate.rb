@@ -7,6 +7,8 @@ module Reform::Contract::Validate
   attr_reader :errors
 
   def validate
+    @errors = build_errors
+
     validate!(errors, [])
 
     errors.empty?
